@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول مراحل المشروع العصري</title>
+    <!-- استدعاء خط عصري -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            background: linear-gradient(to right, #e0f7fa, #ffffff);
+            padding: 40px;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #00796b;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background-color: #ffffffcc;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: right;
+        }
+
+        th {
+            background: linear-gradient(45deg, #00796b, #004d40);
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f1f8f8;
+        }
+
+        tr:hover td {
+            background-color: #b2dfdb;
+            transition: 0.3s;
+        }
+
+        td strong {
+            color: #004d40;
+        }
+
+        /* جعل الجدول متجاوب */
+        @media (max-width: 1024px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                display: none;
+            }
+
+            tr {
+                margin-bottom: 15px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            td {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 15px;
+                border-bottom: 1px solid #ccc;
+            }
+
+            td:last-child {
+                border-bottom: 0;
+            }
+
+            td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: #00796b;
+                width: 50%;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h2>الجدول الكامل لمراحل المشروع</h2>
+<table>
+    <thead>
+        <tr>
+            <th>المرحلة</th>
+            <th>المسؤول</th>
+            <th>المهام المطلوبة</th>
+            <th>المدخلات</th>
+            <th>المخرجات</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="المرحلة"><strong>1) تحليل المتطلبات (Requirement Analysis)</strong></td>
+            <td data-label="المسؤول">فريق كامل (مهندس + أطباء)</td>
+            <td data-label="المهام المطلوبة">تحديد السلوكيات المطلوبة – قائمة التشخيص – شكل التقرير النهائي</td>
+            <td data-label="المدخلات">الفكرة العامة + خبرتكم الطبية</td>
+            <td data-label="المخرجات">وثيقة متطلبات واضحة + قائمة السلوكيات المطلوب تحليلها</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>2) إعداد سياسة الخصوصية والموافقة القانونية</strong></td>
+            <td data-label="المسؤول">المستشار القانوني</td>
+            <td data-label="المهام المطلوبة">صياغة موافقة ولي الأمر – سياسة استخدام الفيديوهات – مدة الاحتفاظ</td>
+            <td data-label="المدخلات">نوع البيانات – آلية الرفع – أعمار الأطفال</td>
+            <td data-label="المخرجات">نموذج موافقة رسمي + سياسة خصوصية مكتوبة</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>3) تصميم النظام (System Architecture)</strong></td>
+            <td data-label="المسؤول">مهندس ذكاء اصطناعي + باكند</td>
+            <td data-label="المهام المطلوبة">تحديد تدفّق البيانات – تحديد الأدوات – اختيار النموذج – رسم البنية</td>
+            <td data-label="المدخلات">وثيقة المتطلبات</td>
+            <td data-label="المخرجات">مخطط معماري للنظام + خطة الأدوات والنماذج</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>4) إعداد وتجهيز البيانات (Data Preparation)</strong></td>
+            <td data-label="المسؤول">الأطباء + مهندس ML</td>
+            <td data-label="المهام المطلوبة">جمع فيديوهات أولية – قص المقاطع – تجهيز ملفات الصوت</td>
+            <td data-label="المدخلات">فيديوهات الجلسات – موافقات أولياء الأمور</td>
+            <td data-label="المخرجات">مجموعة بيانات نظيفة جاهزة للوسم</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>5) وسم البيانات (Data Annotation)</strong></td>
+            <td data-label="المسؤول">الأطباء</td>
+            <td data-label="المهام المطلوبة">وسم السلوكيات: تواصل بصري – حركات متكررة – ارتجاف – استجابة للمحفز</td>
+            <td data-label="المدخلات">مجموعة فيديوهات التدريب</td>
+            <td data-label="المخرجات">ملف وسم كامل بصيغة CSV/JSON</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>6) استخراج الميزات (Feature Extraction)</strong></td>
+            <td data-label="المسؤول">مهندس ML</td>
+            <td data-label="المهام المطلوبة">استخراج وضعية الجسم (MediaPipe) – استخراج نصوص الصوت (Whisper) – تحويلها لأرقام</td>
+            <td data-label="المدخلات">الفيديوهات الموسومة</td>
+            <td data-label="المخرجات">Features جاهزة للتدريب (keypoints + صوت + مؤشرات)</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>7) تدريب النموذج الأولي (Model Training)</strong></td>
+            <td data-label="المسؤول">مهندس ML</td>
+            <td data-label="المهام المطلوبة">اختيار نموذج بسيط (LightGBM/Transformer صغير) – تقسيم البيانات – معايرة النتائج</td>
+            <td data-label="المدخلات">البيانات المستخرجة + الوسوم</td>
+            <td data-label="المخرجات">نموذج يعطي احتمالات (Autism, ADHD, Anxiety, Depression, Behavioral issues)</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>8) اختبار النموذج وتقييمه</strong></td>
+            <td data-label="المسؤول">الأطباء + مهندس ML</td>
+            <td data-label="المهام المطلوبة">مقارنة نتائج النموذج مع الرأي الطبي – تعديل العتبات – تحسين الأداء</td>
+            <td data-label="المدخلات">مخرجات النموذج + عينات جديدة</td>
+            <td data-label="المخرجات">تقرير دقة النموذج + الإصدار الأول المستقر</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>9) بناء واجهة رفع الفيديو (Front-End)</strong></td>
+            <td data-label="المسؤول">مطور الواجهة</td>
+            <td data-label="المهام المطلوبة">تصميم صفحة رفع فيديو – عرض progress – تصميم شاشة التقرير</td>
+            <td data-label="المدخلات">تصميم مبدئي – API جاهز</td>
+            <td data-label="المخرجات">واجهة تعمل لرفع الملفات</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>10) بناء API وتحليل الفيديو (Backend)</strong></td>
+            <td data-label="المسؤول">مهندس باكند</td>
+            <td data-label="المهام المطلوبة">API لاستقبال الفيديو – تمريره للنموذج – معالجة النتائج – حذف الملفات بعد المدة</td>
+            <td data-label="المدخلات">النموذج النهائي + مخطط البنية</td>
+            <td data-label="المخرجات">API جاهز للإنتاج</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>11) توليد التقارير (Report Generation)</strong></td>
+            <td data-label="المسؤول">مهندس باكند + مطور الواجهة</td>
+            <td data-label="المهام المطلوبة">إنشاء ملف PDF – إضافة الرسوم البيانية – كتابة النتائج بنسب – توصيات علاجية</td>
+            <td data-label="المدخلات">نتائج التحليل + تصميم التقرير + توصيات الأطباء</td>
+            <td data-label="المخرجات">تقرير PDF كامل لكل جلسة</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>12) الإطلاق الداخلي (Internal Launch)</strong></td>
+            <td data-label="المسؤول">الفريق كامل</td>
+            <td data-label="المهام المطلوبة">تجربة النظام مع 5–10 جلسات حقيقية – إصلاح الأخطاء – تحسين الواجهة</td>
+            <td data-label="المدخلات">نسخة شبه نهائية</td>
+            <td data-label="المخرجات">نسخة MVP مستقرة</td>
+        </tr>
+        <tr>
+            <td data-label="المرحلة"><strong>13) الإطلاق الرسمي للمراكز (Production Release)</strong></td>
+            <td data-label="المسؤول">الفريق كامل</td>
+            <td data-label="المهام المطلوبة">تشغيل الخادم – تفعيل الحسابات – مراقبة الأداء</td>
+            <td data-label="المدخلات">نسخة MVP</td>
+            <td data-label="المخرجات">المنتج النهائي المستخدم في المراكز</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>ملخّص مسؤوليات كل فرد</h2>
+<table>
+    <thead>
+        <tr>
+            <th>الفرد</th>
+            <th>المسؤوليات</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="الفرد"><strong>مهندس الذكاء الاصطناعي (ML)</strong></td>
+            <td data-label="المسؤوليات">معالجة الفيديو – استخراج الميزات – تدريب النموذج – ضبط الدقة – دمج الصوت والفيديو</td>
+        </tr>
+        <tr>
+            <td data-label="الفرد"><strong>مطور الباكند</strong></td>
+            <td data-label="المسؤوليات">بناء API – إدارة التخزين – الحذف المؤقت – الأمن – توليد التقارير</td>
+        </tr>
+        <tr>
+            <td data-label="الفرد"><strong>مطور الواجهة (Front-End)</strong></td>
+            <td data-label="المسؤوليات">واجهة رفع الفيديو – واجهة عرض التقارير – تصميم تجربة الاستخدام</td>
+        </tr>
+        <tr>
+            <td data-label="الفرد"><strong>الأطباء النفسيون</strong></td>
+            <td data-label="المسؤوليات">تعريف السلوكيات – وسم البيانات – مراجعة نتائج النموذج – صياغة التوصيات</td>
+        </tr>
+        <tr>
+            <td data-label="الفرد"><strong>المستشار القانوني</strong></td>
+            <td data-label="المسؤوليات">صياغة الموافقات – سياسة حماية بيانات الأطفال – شروط الاستخدام</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+
